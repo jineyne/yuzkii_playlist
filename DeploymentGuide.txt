@@ -1,0 +1,86 @@
+🚀 웹사이트 배포 가이드
+===========================
+
+📋 준비:
+dist/ 디렉토리가 이미 있는지 확인하세요 — 이것은 웹사이트의 최종 빌드를 포함합니다
+
+💡 클라우드 플랫폼에 배포 (권장):
+
+🌟 Vercel (vercel.com) – 가장 쉬움
+1. vercel.com으로 이동하여 가입
+2. "New Project" 클릭
+3. "Browse All Templates" → "Static" 선택
+4. dist/ 폴더를 업로드 영역에 드래그 앤 드롭
+5. 프로젝트 이름 입력 후 "Deploy" 클릭
+6. 몇 분 안에 무료 HTTPS URL 받기!
+
+☁️ Cloudflare Pages (pages.cloudflare.com) – 가장 빠름
+1. pages.cloudflare.com으로 이동하여 로그인
+2. "Create a project" → "Upload assets" 클릭
+3. dist/ 폴더를 압축
+4. 압축 파일 업로드
+5. 프로젝트 이름 설정 후 "Deploy site" 클릭
+6. 글로벌 CDN 가속 즐기기!
+
+🔥 Netlify (netlify.com) – 사용자 친화적
+1. netlify.com으로 이동하여 가입
+2. dist/ 폴더를 홈페이지 업로드 영역에 드래그 앤 드롭
+3. 업로드 완료 대기
+4. 랜덤 도메인 받기 (설정에서 사용자 정의 가능)
+
+📘 GitHub Pages (pages.github.com) – 무료 & 신뢰성
+1. GitHub에 새 저장소 생성
+2. dist/ 폴더의 내용을 저장소에 업로드
+3. 저장소 설정 → Pages로 이동
+4. "Deploy from a branch" → 메인 브랜치 선택
+5. username.github.io/repository-name에서 사이트 접속
+
+---
+
+🔧 고급 배포 (개발자용):
+
+Git 기반 자동 배포
+1. 전체 프로젝트(소스 코드 포함)를 GitHub/GitLab에 푸시
+2. Vercel/Netlify와 저장소 연결
+3. 빌드 설정 구성:
+   - 빌드 명령: npm run build
+   - 배포 디렉토리: dist
+   - Node.js 버전: 16.x 이상
+4. 모든 푸시는 자동으로 빌드 및 배포를 트리거
+
+전통적인 서버 배포
+자체 서버가 있는 경우:
+1. dist/ 디렉토리 내부의 모든 파일을 서버의 웹 루트에 업로드
+2. 서버가 정적 파일 호스팅을 지원하는지 확인
+3. 도메인을 통해 웹사이트에 접속
+
+---
+
+💰 가격 정보:
+- Vercel: 개인 사용에 충분한 무료 플랜
+- Cloudflare Pages: 완전 무료, 제한 없음
+- Netlify: 무료 플랜에 월 100GB 대역폭 포함
+- GitHub Pages: 완전 무료, 월 100GB 대역폭
+
+---
+
+🎯 추천:
+- 초보자: Vercel 또는 Netlify (드래그 앤 드롭 업로드)
+- 속도 중시: Cloudflare Pages
+- 장기 프로젝트: GitHub Pages
+- 개발자: Git 기반 자동 배포
+
+---
+
+⚡ 팁:
+- 모든 플랫폼은 무료 HTTPS 인증서를 제공합니다
+- 사용자 정의 도메인을 바인딩할 수 있습니다 (일부는 유료 플랜 필요)
+- 배포 후 다양한 기기에서 웹사이트를 테스트하세요
+
+---
+
+🆘 문제 해결:
+1. dist/의 내용을 업로드했는지 확인, 전체 프로젝트가 아님
+2. index.html이 루트 디렉토리에 있는지 확인
+3. 호스팅 플랫폼의 오류 로그 검토
+4. 모든 파일이 올바르게 업로드되었는지 확인
